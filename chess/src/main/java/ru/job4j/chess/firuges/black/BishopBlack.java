@@ -31,7 +31,8 @@ public class BishopBlack implements Figure {
         int deltaX = startX <= finishX ? 1 : -1;
         int deltaY = startY <= dest.getY() ? 1 : -1;
         for (int index = 0; index < size; index++) {
-            steps[index] = Cell.findBy(startX + (index + 1) * deltaX, startY + (index + 1) * deltaY);
+            steps[index] = Cell.findBy(startX + (index + 1) * deltaX,
+                                        startY + (index + 1) * deltaY);
         }
         return steps;
     }
@@ -41,7 +42,7 @@ public class BishopBlack implements Figure {
         int minX = Math.min(source.getX(), dest.getX());
         int maxY = Math.max(source.getY(), dest.getY());
         int minY = Math.min(source.getY(), dest.getY());
-        return (maxX - minX) == (maxY - minY) ? true : false;
+        return (maxX - minX) == (maxY - minY);
     }
 
     @Override
