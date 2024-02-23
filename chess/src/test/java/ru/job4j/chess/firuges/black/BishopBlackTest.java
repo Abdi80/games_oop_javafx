@@ -5,7 +5,6 @@ import ru.job4j.chess.firuges.Cell;
 import ru.job4j.chess.firuges.Figure;
 import static org.assertj.core.api.Assertions.assertThat;
 
-
 class BishopBlackTest {
 
     @Test
@@ -55,8 +54,4 @@ class BishopBlackTest {
         Cell[] expected = {Cell.C4, Cell.D3, Cell.E2, Cell.F1};
         assertThat(way).isEqualTo(expected);
     }
-
-
-
-
 }
