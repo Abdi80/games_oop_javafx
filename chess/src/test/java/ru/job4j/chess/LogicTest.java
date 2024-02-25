@@ -36,6 +36,6 @@ public class LogicTest {
         logic.add(new BishopBlack(Cell.D2));
         OccupiedCellException exception = assertThrows(OccupiedCellException.class, () ->
                                             logic.move(Cell.C1, Cell.H6));
-        assertThat(exception.getMessage()).isNull();
+        assertThat(exception.getMessage()).isEqualTo("The Way Is Not Clear");
     }
  }
